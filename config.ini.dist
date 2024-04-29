@@ -1,0 +1,35 @@
+# Configuration file for Xiaomi Mi Flora Plant Sensor MQTT Client/Daemon
+# Source: https://github.com/ThomDietrich/miflora-mqtt-daemon
+#
+# Uncomment and adapt all settings as needed.
+# Some settings can be configured by environment variables.
+# If an env variable is set, it takes precedence over settings in this file
+
+[Daemon]
+# Enable or Disable an endless execution loop (Default: true)
+#enabled = true
+
+# The period between two measurements in seconds (Default: 300)
+#period = 300
+
+[MQTT]
+# The hostname or IP address of the MQTT broker to connect to (Default: localhost)
+# Also read from the MQTT_HOSTNAME environment variable
+#hostname = localhost
+
+# The TCP port the MQTT broker is listening on (Default: 1883)
+# Also read from the MQTT_PORT environment variable
+#port = 1883
+
+# Maximum period in seconds between ping messages to the broker. (Default: 60)
+#keepalive = 60
+
+# Enable TLS/SSL on the connection
+#tls = false
+
+[Sensors]
+
+# Add your Mi Flora sensors here. Each sensor consists of a name and a Ethernet MAC address.
+# Additional location information can be added to the name, delimited by an '@'.
+# Scan for sensors from the command line with:
+#    $ sudo hcitool lescan
